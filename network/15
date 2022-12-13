@@ -1,0 +1,3 @@
+#!/bin/sh
+
+echo "46.19.122.85\tintra.42.fr" >> /etc/hosts

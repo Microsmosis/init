@@ -1,0 +1,3 @@
+#!/bin/sh
+
+route get default | awk 'FNR==4 { print }' | sed 's/^.............//'
