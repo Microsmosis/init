@@ -1,3 +1,1 @@
-who -b
-uptime
 last reboot | head -1

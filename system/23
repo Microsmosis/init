@@ -1,0 +1,23 @@
+To connect to a Debian virtual machine (VM) as a new user, you will first need to create a user account on the VM using the useradd command, as described in the previous answer. After creating the user account, you can connect to the VM in two ways: using a graphical session or using an SSH session.
+
+Connecting with a graphical session
+To connect to the VM with a graphical session, you will need to use a remote desktop client program on your local machine. There are many different programs that can be used for this, such as Microsoft Remote Desktop (for Windows), Remmina (for Linux), or Apple Remote Desktop (for Mac).
+
+To connect to the VM using a remote desktop client, you will need to know the IP address of the VM and the username and password of the user account you want to connect with. Once you have this information, you can use the remote desktop client to connect to the VM.
+
+For example, in Microsoft Remote Desktop, you can click the "Add" button to add a new connection, and then enter the IP address of the VM and the username and password of the user account you want to use. Once you have entered this information, you can click the "Connect" button to establish a connection to the VM.
+
+Microsoft Remote Desktop
+
+Once you are connected to the VM, you will be able to interact with the VM's desktop environment as if you were physically sitting in front of the machine. You can open and use programs, access files, and perform other tasks as if you were logged in locally.
+
+Connecting with an SSH session
+To connect to the VM with an SSH session, you will need to use an SSH client program on your local machine. There are many different programs that can be used for this, such as PuTTY (for Windows), OpenSSH (for Linux), or Terminal (for Mac).
+
+To connect to the VM using an SSH client, you will need to know the IP address of the VM and the username and password of the user account you want to connect with. Once you have this information, you can use the SSH client to connect to the VM.
+
+For example, in PuTTY, you can enter the IP address of the VM in the "Host Name" field, and then click the "Open" button to open a new SSH session to the VM. Once the session is open, you will be prompted to enter the username and password of the user account you want to use.
+
+PuTTY SSH client
+
+Once you are logged in to the VM with an SSH session, you will be able to run commands and perform tasks on the VM as if you were logged in locally. You can use the command line interface to run commands and interact with the system, or you can use SSH forwarding to run graphical programs on the VM and display them on your local machine.

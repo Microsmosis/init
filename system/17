@@ -1,0 +1,3 @@
+ ssh -p <port> user@<ip-address-or-hostname> 
+
+ lol this is not enough but you have to config the VM and do it actually
