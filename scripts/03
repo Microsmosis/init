@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Check if the logged in user is in the sudoers file
+if [ $(sudo -l -U $(whoami) | grep -c "sudo") -gt 0 ]; then
+  # If the user is in the sudoers file, output a message congratulating them for their super user authority
+  echo "Congratulations, you have the super user authority to use the sudo command!"
+else
+  # If the user is not in the sudoers file, output a sad poem about not having the rights to do sudo actions
+  echo "Oh sad and lonely user, why must you suffer without sudo?"
+  echo "Your actions are limited, your commands cannot elevate"
+  echo "You are but a mortal, unable to dominate"
+  echo "Better luck next time, in gaining super user authority"
+fi

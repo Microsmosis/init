@@ -1,0 +1,34 @@
+#!/bin/sh
+
+if [ "$1" = "$(whoami)" ]
+then
+	printf "Can't delete current user. Quitting...\n"
+	sleep 1
+	exit 1
+elif id -u "$1" > /dev/null 2>&1
+then
+	sudo killall -u "$1"
+	sudo userdel -rf "$1" > /dev/null 2>&1
+	printf "User %s was successfully deleted. Quitting...\n" "$1"
+else
+	printf "User %s doesn't exist. Quitting...\n" "$1"
+	sleep 1
+	exit 1
+fi
+
+This Linux script is a simple script that can be used to delete a user account on the system. 
+The script takes a username as an argument, and then checks if the specified user exists on the system. If the user exists, the script will kill any processes running under the users account and then delete the user account and the users home directory.
+If the specified user does not exist, or if the user is the currently logged-in user, the script will print an error message and exit.
+
+The script first checks if the specified user is the same as the currently logged-in user by comparing the users name to the output of the whoami command. If the specified user is the currently logged-in user, the script prints a message and exits with an error code.
+
+Copy code
+if [ "$1" = "$(whoami)" ]
+then
+	printf "Can't delete current user. Quitting...\n"
+	sleep 1
+	exit 1
+If the specified user is not the currently logged-in user, the script uses the id command to check if the user exists on the system. If the user exists, the script uses the killall command to kill any processes running under the user's account, and then uses the userdel command to delete the user account and the user's home directory.
+
+Copy code
+elif id -u "$1" > /dev/null 2>&
