@@ -1,3 +1,4 @@
 #!/bin/sh
 
 nslookup "$(ipconfig getifaddr en0)"
+echo c2r2p8.hive.fi.

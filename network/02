@@ -1,5 +1,5 @@
 #!/bin/sh
 
-ifconfig | grep 255 | sed '2d' | sed 's/.............................................//'
+ifconfig en0 | grep "inet " | cut -d " " -f6
 echo
 arp -a
